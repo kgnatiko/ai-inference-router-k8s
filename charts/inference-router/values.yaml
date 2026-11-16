@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: inference-router
+  tag: "0.1.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+redis:
+  image: redis:7.4-alpine
+  port: 6379
